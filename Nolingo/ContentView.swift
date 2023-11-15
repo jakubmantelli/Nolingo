@@ -6,14 +6,27 @@
 //
 
 import SwiftUI
-
+let impactFeedback = UIImpactFeedbackGenerator()
+let notificationFeedback = UINotificationFeedbackGenerator()
+let  selectionFeedback = UISelectionFeedbackGenerator()
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("looking for duolingo? this is nolingo dksodk!")
+           
+            Button("impact") {
+                impactFeedback.impactOccurred()
+            }
+            .padding()
+            Button("notification") {
+                notificationFeedback.notificationOccurred(.success)
+            }
+            .padding()
+            Button("selection") {
+                selectionFeedback.selectionChanged()
+            }
+            .padding()
+            Text("looking for duolingo? this is nolingo!")
         }
         .padding()
     }
