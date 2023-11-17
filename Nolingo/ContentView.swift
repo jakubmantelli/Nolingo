@@ -6,32 +6,63 @@
 //
 
 import SwiftUI
-let impactFeedback = UIImpactFeedbackGenerator()
-let notificationFeedback = UINotificationFeedbackGenerator()
-let  selectionFeedback = UISelectionFeedbackGenerator()
+import UIKit
+
 struct ContentView: View {
+    @State private var selectedTab: Int = 0
+    let  selectionFeedback = UIImpactFeedbackGenerator()
     var body: some View {
         
-        VStack {
-           
-            Button("impact") {
-                impactFeedback.impactOccurred()
+        
+        
+        NavigationView {
+            
+            
+            
+       
+                TabView(selection: $selectedTab) {
+                    
+                    
+                    HomeView()
+                        .tabItem {
+                            
+                            Image(systemName: "house.fill")
+                            Text("Home")
+                        } .onTapGesture {
+                            selectionFeedback.impactOccurred()
+                        }
+                    
+                    ProfileView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("Profile")
+                        }  .onTapGesture {
+                            selectionFeedback.impactOccurred()
+                        }
+                        
+                    
+                    
+                }
             }
-            .padding()
-            Button("notification") {
-                notificationFeedback.notificationOccurred(.success)
-            }
-            .padding()
-            Button("selection") {
-                selectionFeedback.selectionChanged()
-            }
-            .padding()
-            Text("looking for duolingo? this is nolingo!")
+            
+        
+        
+        
+        .preferredColorScheme(.dark)
+            
+            
         }
-        .padding()
     }
-}
+    
+    
 
-#Preview {
-    ContentView()
-}
+    
+    
+    
+    
+    
+    
+    #Preview {
+        ContentView()
+    }
+
