@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373B8C742B07784800CE63AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373B8C732B07784800CE63AF /* Model.swift */; };
+		373B8C782B09672300CE63AF /* ClickableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373B8C772B09672300CE63AF /* ClickableButton.swift */; };
 		3749E2122B04C47E0069BF86 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749E2112B04C47E0069BF86 /* HomeView.swift */; };
 		3749E2142B04C48B0069BF86 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749E2132B04C48B0069BF86 /* ProfileView.swift */; };
 		3749E21A2B04D4500069BF86 /* SplashscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749E2192B04D4500069BF86 /* SplashscreenView.swift */; };
@@ -15,10 +16,12 @@
 		375FA4102B037AAC001717EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FA40F2B037AAC001717EE /* ContentView.swift */; };
 		375FA4122B037AAD001717EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375FA4112B037AAD001717EE /* Assets.xcassets */; };
 		375FA4152B037AAD001717EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375FA4142B037AAD001717EE /* Preview Assets.xcassets */; };
+		37E908312B0C153B00693E62 /* ClickableButtonPurple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		373B8C732B07784800CE63AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		373B8C772B09672300CE63AF /* ClickableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableButton.swift; sourceTree = "<group>"; };
 		3749E2112B04C47E0069BF86 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3749E2132B04C48B0069BF86 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3749E2192B04D4500069BF86 /* SplashscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenView.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		375FA40F2B037AAC001717EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		375FA4112B037AAD001717EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		375FA4142B037AAD001717EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableButtonPurple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 				3749E2192B04D4500069BF86 /* SplashscreenView.swift */,
 				375FA4112B037AAD001717EE /* Assets.xcassets */,
 				375FA4132B037AAD001717EE /* Preview Content */,
-				373B8C732B07784800CE63AF /* Model.swift */,
+				37E908292B0C040900693E62 /* New Group */,
 			);
 			path = Nolingo;
 			sourceTree = "<group>";
@@ -77,6 +81,16 @@
 				375FA4142B037AAD001717EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37E908292B0C040900693E62 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				373B8C732B07784800CE63AF /* Model.swift */,
+				373B8C772B09672300CE63AF /* ClickableButton.swift */,
+				37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +167,9 @@
 				3749E2142B04C48B0069BF86 /* ProfileView.swift in Sources */,
 				3749E2122B04C47E0069BF86 /* HomeView.swift in Sources */,
 				373B8C742B07784800CE63AF /* Model.swift in Sources */,
+				37E908312B0C153B00693E62 /* ClickableButtonPurple.swift in Sources */,
 				375FA4102B037AAC001717EE /* ContentView.swift in Sources */,
+				373B8C782B09672300CE63AF /* ClickableButton.swift in Sources */,
 				375FA40E2B037AAC001717EE /* NolingoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +312,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

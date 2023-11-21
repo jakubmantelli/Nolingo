@@ -8,147 +8,145 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-        
-        
-        ScrollView {
-            
-            Spacer(minLength: 50)
-            //STACK FOR BUTTONS
-            LazyVStack {
-                
-                Button(action: {
-                 
-                    // Action when the button is tapped
-                })
-                
-                {
-                    
-                    Text("Level One")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level One")
-                    
-                    
-                }
-                Image(.button)
-                    .padding()
-                
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Two")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Two")
-                }
-                Image(.button)
-                
-                    .offset(x: 30)
-                    .padding()
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Three")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Three")
-                }
-                Image(.button)
-                    .offset(x: 60)
-                    .padding()
-                
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Four")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Four")
-                }
-                
-                Image(.button)
-                    .offset(x: 90)
-                    .padding()
-                
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Five")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Five")
-                }
-                Image(.button)
-                .offset(x: 60)
-                .padding()
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Six")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Six")
-                }
-                Image(.button)
-                    .padding()
-                
-                
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Seven")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Seven")
-                }
-                Image(.button)
-                .offset(x: -30)
-                .padding()
-                
-                Button(action: {
-                    // Action when the button is tapped
-                }) {
-                    Text("Level Eight")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Eight")
-                }
-                Image(.button)
-                .offset(x: -60)
-                .padding()
-                
-                Button(action: {
-                    // Action when the button is tapped
-                    }) {
-                    Text("Final Level")
-                        .foregroundColor(.clear)
-                        .padding()
-                        .accessibilityLabel("Level Nine, final level")
-                }
-                Image(.button)
-                    .offset(x: -90, y: -50)
-                .padding()
-                
-                
-                
-                
-            }
-            
-            
-            
-            
-            
-        }
-        
-        
-        .background(Color(red: 0.08, green: 0.12, blue: 0.15))
-        .ignoresSafeArea()
-        
-        
-    }
+
     
-}
+    var body: some View {
+        ZStack {
+            // Background
+            Color(red: 0.08, green: 0.12, blue: 0.15)
+                .ignoresSafeArea()
+            
+            
+            
+            VStack {
+                
+                
+                Rectangle()
+                    .foregroundColor(Color(red: 0.36, green: 0.84, blue: 0.01))
+                    .frame(width: 380, height: 80)
+                    .cornerRadius(10)
+                    
+                    .overlay(
+                                           VStack(spacing: 5) {
+                                               Text("BEGINNER 1, UNIT 1")
+                                                   .foregroundColor(Color.white.opacity(0.6))
+                                                   .font(.subheadline)
+                                                   .bold()
+                                               Text("Learn Korean vowels, learn Korean consonants")
+                                                   .foregroundColor(Color.white)
+                                                   .font(.subheadline)
+                                                   .bold()
+                                                 
+                                           }
+                                           .padding()
+                                           
+                                           
+                    )
+                   
+                    .offset(y: 15)
+                                       .zIndex(1)
+             
+               
+                
+                ScrollView {
+                    
+                    
+                    //STACK FOR BUTTONS
+                    LazyVStack {
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level One, unit one"))
+                            .offset(y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Two, unit one"))
+                            .offset(x: -50, y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Three, unit one"))
+                            .offset(x: -90, y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Four, unit one"))
+                            .offset(x: -50, y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Five, unit one"))
+                            .offset(y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Six, unit one"))
+                            .offset(x:50,y:15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Seven, unit one"))
+                            .offset(x: 90, y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Eight, unit one"))
+                            .offset(x: 50, y: 15)
+                        
+                        ClickableButton()
+                            .accessibility(label: Text("Level Nine, final unit one level"))
+                            .offset(y: 15)
+                        
+                        
+                        Spacer(minLength: 150)
+                        
+                        
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level One, unit two"))
+                            .offset(y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Two, unit two"))
+                            .offset(x: -50, y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Three, unit two"))
+                            .offset(x: -90, y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Four, unit two"))
+                            .offset(x: -50, y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Five, unit two"))
+                            .offset(y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Six, unit two"))
+                            .offset(x:50,y:15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Seven, unit two"))
+                            .offset(x: 90, y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Eight, unit two"))
+                            .offset(x: 50, y: 15)
+                        
+                        ClickableButtonPurple()
+                            .accessibility(label: Text("Level Nine, final unit two level"))
+                            .offset(y: 15)
+                        
+                        
+                        
+                        
+                        
+                        Spacer(minLength: 30)
+                    }
+                }
+       
+              
+                
+
+            }
+                         }
+                     }
+                 }
+    
 
 #Preview {
     HomeView()

@@ -9,7 +9,6 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
-    @State private var selectedTab: Int = 0
     let  selectionFeedback = UIImpactFeedbackGenerator()
     var body: some View {
         
@@ -20,36 +19,47 @@ struct ContentView: View {
             
             
        
-                TabView(selection: $selectedTab) {
+                TabView() {
                     
-                    
-                    HomeView()
-                        .tabItem {
-                            
-                            Image(systemName: "house.fill")
-                            Text("Home")
-                        } .onTapGesture {
-                            selectionFeedback.impactOccurred()
-                        }
-                    
-                    ProfileView()
-                        .tabItem {
-                            Image(systemName: "person.fill")
-                            Text("Profile")
-                        }  .onTapGesture {
-                            selectionFeedback.impactOccurred()
-                        }
+                    Group{
                         
-                    
+                        HomeView()
+                            .tabItem {
+                                
+                                Image(systemName: "house.fill")
+                                Text("Home")
+                                    .onTapGesture {
+                                        selectionFeedback.impactOccurred()
+                                    }
+                            }
+                            
+                 
+                        
+                        ProfileView()
+                            .tabItem {
+                                
+                                Image(systemName: "person.fill")
+                                    .onTapGesture {
+                                        selectionFeedback.impactOccurred()
+                                    }
+                                Text("Profile")
+                                   
+                            }
+                            
+                        
+                    }
+                    .toolbarBackground(Color(red: 0.08, green: 0.12, blue: 0.15), for: .tabBar)
+                    .toolbarBackground(.visible, for: .tabBar)
                     
                 }
-            }
+            
+        }
             
         
         
         
         .preferredColorScheme(.dark)
-            
+        .navigationBarHidden(true)
             
         }
     }
@@ -65,4 +75,5 @@ struct ContentView: View {
     #Preview {
         ContentView()
     }
+
 
