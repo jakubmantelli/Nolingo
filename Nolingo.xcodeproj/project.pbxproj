@@ -17,6 +17,10 @@
 		375FA4122B037AAD001717EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375FA4112B037AAD001717EE /* Assets.xcassets */; };
 		375FA4152B037AAD001717EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375FA4142B037AAD001717EE /* Preview Assets.xcassets */; };
 		37E908312B0C153B00693E62 /* ClickableButtonPurple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */; };
+		37E908352B0E937200693E62 /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E908342B0E937200693E62 /* StreakView.swift */; };
+		37E908372B0E95C000693E62 /* ExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E908362B0E95C000693E62 /* ExpView.swift */; };
+		37E908392B0E95CE00693E62 /* LeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E908382B0E95CE00693E62 /* LeagueView.swift */; };
+		37E9083B2B0E95D800693E62 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9083A2B0E95D800693E62 /* MedalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		375FA4112B037AAD001717EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		375FA4142B037AAD001717EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableButtonPurple.swift; sourceTree = "<group>"; };
+		37E908342B0E937200693E62 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
+		37E908362B0E95C000693E62 /* ExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpView.swift; sourceTree = "<group>"; };
+		37E908382B0E95CE00693E62 /* LeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueView.swift; sourceTree = "<group>"; };
+		37E9083A2B0E95D800693E62 /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 		375FA4012B037AAC001717EE = {
 			isa = PBXGroup;
 			children = (
+				37E908292B0C040900693E62 /* Models */,
 				375FA40C2B037AAC001717EE /* Nolingo */,
 				375FA40B2B037AAC001717EE /* Products */,
 			);
@@ -70,7 +79,10 @@
 				3749E2192B04D4500069BF86 /* SplashscreenView.swift */,
 				375FA4112B037AAD001717EE /* Assets.xcassets */,
 				375FA4132B037AAD001717EE /* Preview Content */,
-				37E908292B0C040900693E62 /* New Group */,
+				37E908342B0E937200693E62 /* StreakView.swift */,
+				37E908362B0E95C000693E62 /* ExpView.swift */,
+				37E908382B0E95CE00693E62 /* LeagueView.swift */,
+				37E9083A2B0E95D800693E62 /* MedalView.swift */,
 			);
 			path = Nolingo;
 			sourceTree = "<group>";
@@ -83,14 +95,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		37E908292B0C040900693E62 /* New Group */ = {
+		37E908292B0C040900693E62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				373B8C732B07784800CE63AF /* Model.swift */,
 				373B8C772B09672300CE63AF /* ClickableButton.swift */,
 				37E908302B0C153B00693E62 /* ClickableButtonPurple.swift */,
 			);
-			path = "New Group";
+			name = Models;
+			path = "Modelsù";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E908392B0E95CE00693E62 /* LeagueView.swift in Sources */,
 				3749E21A2B04D4500069BF86 /* SplashscreenView.swift in Sources */,
 				3749E2142B04C48B0069BF86 /* ProfileView.swift in Sources */,
 				3749E2122B04C47E0069BF86 /* HomeView.swift in Sources */,
+				37E9083B2B0E95D800693E62 /* MedalView.swift in Sources */,
+				37E908352B0E937200693E62 /* StreakView.swift in Sources */,
 				373B8C742B07784800CE63AF /* Model.swift in Sources */,
 				37E908312B0C153B00693E62 /* ClickableButtonPurple.swift in Sources */,
+				37E908372B0E95C000693E62 /* ExpView.swift in Sources */,
 				375FA4102B037AAC001717EE /* ContentView.swift in Sources */,
 				373B8C782B09672300CE63AF /* ClickableButton.swift in Sources */,
 				375FA40E2B037AAC001717EE /* NolingoApp.swift in Sources */,

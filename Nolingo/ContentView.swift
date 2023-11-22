@@ -9,7 +9,9 @@ import SwiftUI
 import UIKit
 
 struct ContentView: View {
+    
     let  selectionFeedback = UIImpactFeedbackGenerator()
+    @State var tabSelection = 0
     var body: some View {
         
         
@@ -19,7 +21,7 @@ struct ContentView: View {
             
             
        
-                TabView() {
+            TabView(selection: $tabSelection) {
                     
                     Group{
                         
@@ -32,6 +34,7 @@ struct ContentView: View {
                                         selectionFeedback.impactOccurred()
                                     }
                             }
+                            .tag(0)
                             
                  
                         
@@ -45,9 +48,12 @@ struct ContentView: View {
                                 Text("Profile")
                                    
                             }
-                            
+                            .tag(1)
                         
                     }
+                    
+                    .sensoryFeedback(.impact, trigger: tabSelection)
+                    
                     .toolbarBackground(Color(red: 0.08, green: 0.12, blue: 0.15), for: .tabBar)
                     .toolbarBackground(.visible, for: .tabBar)
                     

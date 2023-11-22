@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-
     
     var body: some View {
         ZStack {
@@ -19,34 +18,41 @@ struct HomeView: View {
             
             
             VStack {
-                
+                Button {
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                    }
+                }
+            label: {
                 
                 Rectangle()
-                    .foregroundColor(Color(red: 0.36, green: 0.84, blue: 0.01))
+                    .foregroundColor(Color(red: 0.11, green: 0.69, blue: 0.96))
                     .frame(width: 380, height: 80)
                     .cornerRadius(10)
-                    
+                
                     .overlay(
-                                           VStack(spacing: 5) {
-                                               Text("BEGINNER 1, UNIT 1")
-                                                   .foregroundColor(Color.white.opacity(0.6))
-                                                   .font(.subheadline)
-                                                   .bold()
-                                               Text("Learn Korean vowels, learn Korean consonants")
-                                                   .foregroundColor(Color.white)
-                                                   .font(.subheadline)
-                                                   .bold()
-                                                 
-                                           }
-                                           .padding()
-                                           
-                                           
+                        VStack(spacing: 5) {
+                            Text("BEGINNER 1, UNIT 1")
+                                .foregroundColor(Color.white.opacity(0.6))
+                                .font(.subheadline)
+                                .bold()
+                            Text("Learn Korean vowels, learn Korean consonants")
+                                .foregroundColor(Color.white)
+                                .font(.subheadline)
+                                .bold()
+                            
+                        }
+                        
+                            .padding()
+                        
+                        
                     )
-                   
+            }
                     .offset(y: 15)
-                                       .zIndex(1)
-             
-               
+                    .zIndex(1)
+                
+                
                 
                 ScrollView {
                     
@@ -91,8 +97,24 @@ struct HomeView: View {
                             .offset(y: 15)
                         
                         
-                        Spacer(minLength: 150)
+                        Spacer(minLength: 100)
                         
+                        Divider()
+                            .frame(width: 220)
+                        
+                       
+                        
+                     
+                     ProfileView()
+                        Text("Learn more consonants, learn basic phrases ")
+                        
+                            .multilineTextAlignment(.center)
+                            .bold()
+                            .font(.title2)
+                            .foregroundColor(.white.opacity(0.2))
+                            .offset(y: -10)
+                        
+                      
                         
                         
                         ClickableButtonPurple()
@@ -131,22 +153,23 @@ struct HomeView: View {
                             .accessibility(label: Text("Level Nine, final unit two level"))
                             .offset(y: 15)
                         
-                        
-                        
-                        
-                        
                         Spacer(minLength: 30)
+                        
+                        
                     }
                 }
-       
-              
                 
-
+                
+                
+                
+                
+                
             }
-                         }
-                     }
-                 }
+        }
+    }
     
+    
+}
 
 #Preview {
     HomeView()
