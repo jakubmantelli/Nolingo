@@ -72,6 +72,16 @@ struct HomeView: View {
                             .accessibility(label: Text("Level Three, unit one"))
                             .offset(x: -90, y: 15)
                         
+                        
+                            .overlay(
+                                Image("duo1")
+                                    .accessibilityLabel("Duolingo character, Duo, whistling")
+                                    .offset( x: 85)
+                                    .onTapGesture {
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    }
+                            )
+                            
                         ClickableButton()
                             .accessibility(label: Text("Level Four, unit one"))
                             .offset(x: -50, y: 15)
@@ -87,6 +97,15 @@ struct HomeView: View {
                         ClickableButton()
                             .accessibility(label: Text("Level Seven, unit one"))
                             .offset(x: 90, y: 15)
+                        
+                            .overlay(
+                                Image("duo2")
+                                    .accessibilityLabel("Duolingo character, Duo, waving")
+                                    .offset( x: -85)
+                                    .onTapGesture {
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    }
+                            )
                         
                         ClickableButton()
                             .accessibility(label: Text("Level Eight, unit one"))
@@ -107,6 +126,7 @@ struct HomeView: View {
                      
                      ProfileView()
                         Text("Learn more consonants, learn basic phrases ")
+                            .accessibilityLabel("Start of unit 2: learn more consonants, learn basic phrases")
                         
                             .multilineTextAlignment(.center)
                             .bold()
@@ -128,7 +148,14 @@ struct HomeView: View {
                         ClickableButtonPurple()
                             .accessibility(label: Text("Level Three, unit two"))
                             .offset(x: -90, y: 15)
-                        
+                            .overlay(
+                                Image("ali")
+                                    .accessibilityLabel("Duolingo character, vikram, eating noodles")
+                                    .offset( x: 85)
+                                    .onTapGesture {
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    }
+                            )
                         ClickableButtonPurple()
                             .accessibility(label: Text("Level Four, unit two"))
                             .offset(x: -50, y: 15)
@@ -140,6 +167,15 @@ struct HomeView: View {
                         ClickableButtonPurple()
                             .accessibility(label: Text("Level Six, unit two"))
                             .offset(x:50,y:15)
+                        
+                            .overlay(
+                                Image("ali2")
+                                    .accessibilityLabel("Duolingo character, vikram, crying in despair")
+                                    .offset( x: -85)
+                                    .onTapGesture {
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    }
+                            )
                         
                         ClickableButtonPurple()
                             .accessibility(label: Text("Level Seven, unit two"))

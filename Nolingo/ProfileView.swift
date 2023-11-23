@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var isExpPresented = false
     @State private var isLeaguePresented = false
     @State private var isMedalPresented = false
+    @State private var isFriendsPresented = false
 
     var body: some View {
         
@@ -113,10 +114,10 @@ struct ProfileView: View {
                         
                         
 // Add Friends button
-                        Button {
+                        Button(action: {
+                                    isFriendsPresented.toggle()
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        }
-                    label: {
+                        }) {
                         HStack {
                             Image(systemName: "person.fill.badge.plus")
                             
@@ -141,6 +142,10 @@ struct ProfileView: View {
                         
                     }        .accessibilityLabel("Add Friends")
                             .offset(x: -40, y: -50)
+                            .sheet(isPresented: $isFriendsPresented) {
+                                AddFriendsView()
+                            }
+                            
                         
 // Share Button
                         
@@ -173,10 +178,14 @@ struct ProfileView: View {
                     
 //Divider
                     Divider()
-                    
+                        .padding()
 //Stats section scroll view
                     
                     Text ("Statistics")
+                        .bold()
+                        .font(.title2)
+                        .padding(.leading)
+                        .offset(x: -130)
                     // Day streak stat
                     Button(action: {
                                 isStreakPresented.toggle()
@@ -244,7 +253,7 @@ struct ProfileView: View {
                             )
                         
                         
-                    } .offset(x: 100, y: -78)
+                    } .offset(x: 100, y: -80)
                         .sheet(isPresented: $isExpPresented) {
                             ExpView()
                         }
@@ -256,7 +265,7 @@ struct ProfileView: View {
                     }) {
                     
                         VStack {
-                            Text("Sapphire")
+                            Text("💎Sapphire")
                                 .bold()
                             Text("Current League")
                                 .bold()
@@ -301,23 +310,18 @@ struct ProfileView: View {
                         )
                     
                     
-                } .offset(x: 100, y: -150)
+                    } .offset(x: 100, y: -148.5)
                         .sheet(isPresented: $isMedalPresented) {
                             MedalView()
                         }
                     
-                    
-                    
-                    
-                    
+                        .padding(.bottom, 10)
+                        
                     Divider()
                     
                     
                     
                     
-// Achievements View
-                
-                    Text ("Achievements")
                 } 
             }
             

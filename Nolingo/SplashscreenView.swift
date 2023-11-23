@@ -15,24 +15,24 @@
             
             
             
-            
-            
+            NavigationView {
             ZStack {
-                Color(.blue)
-                NavigationView {
+                Color(red: 0.47, green: 0.78, blue: 0.00)
+                    .ignoresSafeArea()
                     
                     VStack {
                         
                     Image("duologo")
                             .resizable()
                             .scaledToFit()
-                            .shadow(radius: 20)
+                         
+                            .frame(width: 250, height: 250)
                       
                         
                         Text("nolingo")
                             .font(.largeTitle)
                             .bold()
-                            .foregroundColor((Color(red: 0.36, green: 0.84, blue: 0.01)))
+                            .foregroundColor(.white)
                             .padding(.top, 5)
                         
                           

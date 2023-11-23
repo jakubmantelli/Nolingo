@@ -21,6 +21,8 @@ struct StreakView: View {
                     Image("streak")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .cornerRadius(20)
+                        .accessibilityLabel("Streak: duolingo owl, logo in flames")
                     Text("You are on a 42 day streak!")
                         .bold()
                         .font(.title)
@@ -29,6 +31,7 @@ struct StreakView: View {
                     
                     Text("Keep the flame lit every day!")
                         .bold()
+                        .foregroundColor(.white)
                     
                     
                     ShareLink("SHARE", item: photo,  preview: SharePreview("streakshare", image: photo))
